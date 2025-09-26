@@ -1,0 +1,40 @@
+---
+title: REPORT OF ANALYSIS
+date: today
+date-format: MM/DD/YYYY
+
+format:
+  typst:
+    fontsize: 11pt
+    mainfont: Times New Roman
+    margin:
+      x: 1in
+      y: 1in
+    page-numbering: 1 of 1
+    keep-typ: true
+    template: templates/template.typ
+    template-partials:
+      - templates/page.typ
+---
+
+### Introduction
+
+{{< lipsum 2 >}}
+
+### Experimental Section
+
+#### Safety
+
+Hazard Review 646.03.0052: Compressed gas cylinder transport and use.
+
+#### Traceability Statement
+
+{{< lipsum 1 >}}
+
+#### Materials
+
+{{< lipsum 1 >}}
+
+#### Equipment and Instrumentation
+
+{{< lipsum 1 >}}

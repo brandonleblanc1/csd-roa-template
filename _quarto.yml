@@ -1,0 +1,18 @@
+project:
+  title: "csd-roa-template"
+brand: false
+fig-dpi: 300
+fig-cap-location: bottom
+tbl-cap-location: top
+
+execute:
+  echo: false
+  warning: false
+
+params:
+  logo:
+    path: logos/nist-logo.png
+    location: left + top
+    width: 3in
+    inset: 0.5in
+  roa-number: 646.03-25-XXX
