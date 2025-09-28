@@ -1,12 +1,11 @@
 #set page(
   paper: "us-letter",
-  margin: ($for(margin/pairs)$$margin.key$: $margin.value$,$endfor$),
-  numbering: "$page-numbering$",
+  margin: (x: 1in, y: 1in),
+  numbering: "1 of 1",
   header: align(right)[$params.roa-number$],
   background: context {
-  if counter(page).get().first() == 1 {
-    align($params.logo.location$,
-                    box(inset: $params.logo.inset$,
-                        image("$params.logo.path$", width: $params.logo.width$)))
+    if counter(page).get().first() == 1 {
+      align(left + top, box(inset: 0.25in, image("$params.logo$", width: 2.5in)))
     }
-})
+  }
+)

@@ -1,40 +1,78 @@
 ---
 title: REPORT OF ANALYSIS
 date: today
-date-format: MM/DD/YYYY
+date-format: long
 
 format:
   typst:
-    fontsize: 11pt
-    mainfont: Times New Roman
-    margin:
-      x: 1in
-      y: 1in
-    page-numbering: 1 of 1
     keep-typ: true
     template: templates/template.typ
     template-partials:
       - templates/page.typ
+      - templates/typst-template.typ
+      - templates/typst-show.typ
 ---
 
-### Introduction
+# Introduction
 
 {{< lipsum 2 >}}
 
-### Experimental Section
+# Experimental Section
 
-#### Safety
+## Safety
 
 Hazard Review 646.03.0052: Compressed gas cylinder transport and use.
 
-#### Traceability Statement
+## Traceability Statement
+
+{{< lipsum 2 >}}
+
+## Materials
 
 {{< lipsum 1 >}}
 
-#### Materials
+## Equipment and Instrumentation
+
+* Thermo Scientific 42iQHL Chemiluminescence Analyzer (NIST #N121055)
+* COGAS #20
+* Keithly 2100 Digital Multimeter (NIST #1424390, NIST #1424246)
+
+## Sample Preparation
 
 {{< lipsum 1 >}}
 
-#### Equipment and Instrumentation
+## Instrumental Method
+
+{{< lipsum 2 >}}
+
+## Quantitation and Procedure
+
+### Statistical Analysis
 
 {{< lipsum 1 >}}
+
+### Homogeneity Analysis
+
+{{< lipsum 2 >}}
+
+### Stability
+
+{{< lipsum 1 >}}
+
+# Results and Discussion
+
+## Value Assignment of Lot Standards
+
+{{< lipsum 2 >}}
+
+### Analysis of Previous Lot Standards
+
+{{< lipsum 3 >}}
+
+## Value Assignment of Samples
+
+{{< lipsum 2 >}}
+
+## Uncertainty Assessment
+
+{{< lipsum 2 >}}

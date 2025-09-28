@@ -1,96 +1,75 @@
-#let article(
+#let report(
   title: none,
-  subtitle: none,
-  authors: none,
   date: none,
-  abstract: none,
-  abstract-title: none,
   cols: 1,
   lang: "en",
   region: "US",
   font: "libertinus serif",
   fontsize: 11pt,
-  title-size: 1.5em,
-  subtitle-size: 1.25em,
+  line-height: 1em,
   heading-family: "libertinus serif",
-  heading-weight: "bold",
-  heading-style: "normal",
-  heading-color: black,
-  heading-line-height: 0.65em,
-  sectionnumbering: none,
+  heading-line-height: 1em,
   toc: false,
-  toc_title: none,
-  toc_depth: none,
-  toc_indent: 1.5em,
-  doc,
+  doc
 ) = {
-  set par(justify: true)
+  set par(justify: true,
+          spacing: line-height)
+
   set text(lang: lang,
            region: region,
            font: font,
            size: fontsize)
-  set heading(numbering: sectionnumbering)
-  if title != none {
-    align(center)[#block(inset: 2em)[
-      #set par(leading: heading-line-height)
-      #if (heading-family != none or heading-weight != "bold" or heading-style != "normal"
-           or heading-color != black) {
-        set text(font: heading-family, weight: heading-weight, style: heading-style, fill: heading-color)
-        text(size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(size: subtitle-size)[#subtitle]
-        }
-      } else {
-        text(weight: "bold", size: title-size)[#title]
-        if subtitle != none {
-          parbreak()
-          text(weight: "bold", size: subtitle-size)[#subtitle]
-        }
-      }
-    ]]
-  }
 
-  if authors != none {
-    let count = authors.len()
-    let ncols = calc.min(count, 3)
-    grid(
-      columns: (1fr,) * ncols,
-      row-gutter: 1.5em,
-      ..authors.map(author =>
-          align(center)[
-            #author.name \
-            #author.affiliation \
-            #author.email
-          ]
-      )
-    )
-  }
+  show heading: it => {
+    let heading-size = 1em
+    let heading-scale = 1
+    let heading-weight = "bold"
+    let heading-style = "normal"
 
-  if date != none {
-    align(center)[#block(inset: 1em)[
-      #date
-    ]]
-  }
+    if it.level == 1 {
+      heading-size = 1.2em
+      heading-scale = 1.4
+    } else if it.level == 2 {
+      heading-size = 1.2em
+      heading-scale = 1.2
+      heading-weight = "regular"
+      heading-style = "italic"
+    }
 
-  if abstract != none {
-    block(inset: 2em)[
-    #text(weight: "semibold")[#abstract-title] #h(1em) #abstract
+    block(above: 1.5em/heading-scale, below: 1.5em/heading-scale)[
+      #text(font: heading-family, size: heading-size/heading-scale,
+            weight: heading-weight, style: heading-style)[
+        #it
+      ]
     ]
   }
 
+  align(center)[
+    #block()[
+      #text(weight: "bold", size: 0.8em)[
+        U.S. Department of Commerce\
+        National Institute of Standards and Technology\
+        Material Measurement Laboratory\
+        Chemical Sciences Division\
+        Gaithersburg, MD 20899
+      ]
+    ]
+  ]
+
+  align(center)[
+    #block(above: 1.5em, below: 1.5em)[
+      #text(font: heading-family, size: 1.5em, weight: "bold")[#title]
+    ]
+  ]
+
+  align(center)[
+    #block()[#date]
+  ]
+
   if toc {
-    let title = if toc_title == none {
-      auto
-    } else {
-      toc_title
-    }
-    block(above: 0em, below: 2em)[
-    #outline(
-      title: toc_title,
-      depth: toc_depth,
-      indent: toc_indent
-    );
+    block(above: 2em, below: 2em)[
+      #outline(title: "Contents",
+               depth: 2)
     ]
   }
 
