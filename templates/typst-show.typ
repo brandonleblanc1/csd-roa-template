@@ -1,4 +1,4 @@
-#show: doc => report(
+#show: doc => report-header(
   title: [$title$],
   date: [$date$],
 $if(columns)$

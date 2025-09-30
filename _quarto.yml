@@ -1,5 +1,6 @@
 project:
   title: "csd-roa-template"
+
 fig-dpi: 300
 fig-cap-location: bottom
 tbl-cap-location: top
@@ -10,4 +11,11 @@ execute:
 
 params:
   logo: logos/nist-logo.png
-  roa-number: 646.03-25-XXX
+  roa-number: 646.03-26-XXX
+  department: U.S. Department of Commerce
+  agency:
+    full: National Institute of Standards and Technology
+    short: NIST
+  laboratory: Material Measurement Laboratory
+  division: Chemical Sciences Division
+  location: Gaithersburg, MD 20899

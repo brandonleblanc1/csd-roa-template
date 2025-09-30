@@ -13,21 +13,32 @@ format:
       - templates/typst-show.typ
 ---
 
+::: {layout-ncol=2}
+| &deg;C works, but \u{00B0} doesn't.
+| In Typst, the opposite is true.
+
+*Hello there!* **General Kenobi!**
+:::
+
 # Introduction
 
 {{< lipsum 2 >}}
 
-# Experimental Section
+# Traceability Statement
+
+{{< lipsum 1 >}}
+
+# Experimental
 
 ## Safety
 
 Hazard Review 646.03.0052: Compressed gas cylinder transport and use.
 
-## Traceability Statement
-
-{{< lipsum 2 >}}
-
 ## Materials
+
+{{< lipsum 1 >}}
+
+## Sample Preparation
 
 {{< lipsum 1 >}}
 
@@ -36,10 +47,6 @@ Hazard Review 646.03.0052: Compressed gas cylinder transport and use.
 * Thermo Scientific 42iQHL Chemiluminescence Analyzer (NIST #N121055)
 * COGAS #20
 * Keithly 2100 Digital Multimeter (NIST #1424390, NIST #1424246)
-
-## Sample Preparation
-
-{{< lipsum 1 >}}
 
 ## Instrumental Method
 
@@ -76,3 +83,21 @@ Hazard Review 646.03.0052: Compressed gas cylinder transport and use.
 ## Uncertainty Assessment
 
 {{< lipsum 2 >}}
+
+# Disposition of Cylinders
+
+{{< lipsum 2 >}}
+
+# Data Storage
+
+* Notebook 1
+* File 1
+* File 2
+* File 3
+
+{{< pagebreak >}}
+
+# References
+
+::: {#refs}
+:::

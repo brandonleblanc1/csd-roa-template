@@ -1,4 +1,4 @@
-#let report(
+#let report-header(
   title: none,
   date: none,
   cols: 1,
@@ -20,11 +20,15 @@
            font: font,
            size: fontsize)
 
+  set table(inset: 6pt,
+            stroke: none)
+
   show heading: it => {
     let heading-size = 1em
     let heading-scale = 1
     let heading-weight = "bold"
     let heading-style = "normal"
+    let heading-font = heading-family
 
     if it.level == 1 {
       heading-size = 1.2em
@@ -34,10 +38,12 @@
       heading-scale = 1.2
       heading-weight = "regular"
       heading-style = "italic"
+    } else {
+      heading-font = font
     }
 
     block(above: 1.5em/heading-scale, below: 1.5em/heading-scale)[
-      #text(font: heading-family, size: heading-size/heading-scale,
+      #text(font: heading-font, size: heading-size/heading-scale,
             weight: heading-weight, style: heading-style)[
         #it
       ]
@@ -47,23 +53,27 @@
   align(center)[
     #block()[
       #text(weight: "bold", size: 0.8em)[
-        U.S. Department of Commerce\
-        National Institute of Standards and Technology\
-        Material Measurement Laboratory\
-        Chemical Sciences Division\
-        Gaithersburg, MD 20899
+        $params.department$ \
+        $params.agency.full$ \
+        $params.laboratory$ \
+        $params.division$ \
+        $params.location$
       ]
     ]
   ]
 
   align(center)[
     #block(above: 1.5em, below: 1.5em)[
-      #text(font: heading-family, size: 1.5em, weight: "bold")[#title]
+      #text(font: heading-family, size: 1.5em, weight: "bold")[
+        #title
+      ]
     ]
   ]
 
   align(center)[
-    #block()[#date]
+    #block()[
+      #date
+    ]
   ]
 
   if toc {
@@ -79,8 +89,3 @@
     columns(cols, doc)
   }
 }
-
-#set table(
-  inset: 6pt,
-  stroke: none
-)

@@ -1,7 +1,7 @@
 meta:
   name:
-    full: National Institute of Standards and Technology
-    short: NIST
+    full: params.agency.full
+    short: params.agency.short
 typography:
   fonts:
     - family: Aptos
