@@ -1,0 +1,31 @@
+meta:
+  name:
+    full: National Institute of Standards and Technology
+    short: NIST
+typography:
+  fonts:
+    - family: Optima
+      source: file
+      files:
+        - path: assets/fonts/optima/Optima.ttf
+        - path: assets/fonts/optima/Optima-Italic.ttf
+          style: italic
+        - path: assets/fonts/optima/Optima-Bold.ttf
+          weight: bold
+    - family: EB Garamond
+      source: file
+      files:
+        - path: assets/fonts/eb_garamond/EBGaramond.ttf
+        - path: assets/fonts/eb_garamond/EBGaramond-Italic.ttf
+          style: italic
+        - path: assets/fonts/eb_garamond/EBGaramond-Bold.ttf
+          weight: bold
+    - family: Garamond-Math
+      source: file
+      files:
+        - path: assets/fonts/garamond_math/Garamond-Math.otf
+  base:
+    family: EB Garamond
+    size: 11pt
+  headings:
+    family: Optima

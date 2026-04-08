@@ -1,0 +1,29 @@
+title: CSD Report of Analysis
+author: Brandon LeBlanc
+organization: NIST
+version: 1.0.0
+quarto-required: ">=1.9.29"
+contributes:
+  metadata:
+    project:
+      brand: brand.yml
+  project:
+    project:
+      type: default
+    format: csd-roa-typst
+  formats:
+    typst:
+      template: template.typ
+      template-partials:
+        - definitions.typ
+        - typst-template.typ
+        - typst-show.typ
+      filters:
+        - quarto
+        - typst-function
+      variables:
+        logos:
+          nist-logo: assets/logos/nist-logo.png
+        fonts:
+          math:
+            family: Garamond-Math

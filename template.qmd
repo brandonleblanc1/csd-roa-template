@@ -1,0 +1,131 @@
+---
+roa-num: 646.03-FY-XXX
+submitted-to:
+  person: First Last, Title
+  association: Group or Division Name
+cover-title:
+  line1: Title Line 1
+  # Including `line2` is optional; set to `false` if not needed
+  line2: false
+purpose: Brief statement specifying purpose of the ROA
+lab-dates:
+  from:
+    day: 1
+    month: 1
+    year: 9999
+  to:
+    day: 1
+    month: 1
+    year: 9999
+methods: Sample preparation and/or instrumental methods used
+controls-used: Control samples used
+quality-docs: Applicable quality manuals and technical procedures
+# Optional metadata begin -----------------------------------------------------
+# The following should be specified only if applicable; set to `false` if not needed
+srms: false
+constituents: false
+assigned-value:
+  value: false
+  uncertainty: false
+  # `units` should be specified by their common name (e.g., ppm, ppb, percent, or %)
+  units: false
+exp-date:
+  day: false
+  month: false
+  year: false
+collaborators: false
+agreements: false
+approvals: false
+copies-to: false
+# Optional metadata end -------------------------------------------------------
+prepared-by:
+  - name: Brandon LeBlanc
+    title: Physical Science Technician
+reviewed-by:
+  - name: Christina Cecelski
+    title: Deputy Group Leader, GSMG
+  - name: Jennifer Carney
+    title: Group Leader, GSMG
+---
+
+# Introduction
+
+{{< lipsum 2 >}}
+
+# Traceability Statement
+
+{{< lipsum 1 >}}
+
+# Experimental
+
+## Safety
+
+Hazard Review 646.03.0052: Compressed gas cylinder transport and use @GasSRMTechSpecs.
+
+## Materials
+
+{{< lipsum 1 >}}
+
+## Sample Preparation
+
+{{< lipsum 1 >}}
+
+## Equipment and Instrumentation
+
+* Thermo Scientific 42iQHL Chemiluminescence Analyzer (NIST #N121055)
+* COGAS #20
+* Keithly 2100 Digital Multimeter (NIST #1424390, NIST #1424246)
+
+## Instrumental Methods
+
+{{< lipsum 2 >}}
+
+## Quantitative Methods
+
+### Statistical Analysis
+
+{{< lipsum 1 >}}
+
+### Homogeneity Analysis
+
+{{< lipsum 2 >}}
+
+### Stability
+
+{{< lipsum 1 >}}
+
+# Results and Discussion
+
+## Value Assignment of Lot Standards
+
+{{< lipsum 2 >}}
+
+### Analysis of Previous Lot Standards
+
+{{< lipsum 3 >}}
+
+## Value Assignment of Samples
+
+{{< lipsum 2 >}}
+
+## Uncertainty Assessment
+
+{{< lipsum 2 >}}
+
+# Disposition of Cylinders
+
+{{< lipsum 2 >}}
+
+# Data Storage
+
+* Notebook 1
+* File 1
+* File 2
+* File 3
+
+{{< pagebreak >}}
+
+# References
+
+::: {#refs}
+:::
