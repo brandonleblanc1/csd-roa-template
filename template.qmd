@@ -1,5 +1,5 @@
 ---
-roa-num: 646.03-FY-XXX
+roa-num: 646.GR-FY-XXX
 submitted-to:
   person: First Last, Title
   association: Group or Division Name
@@ -42,10 +42,8 @@ prepared-by:
   - name: Brandon LeBlanc
     title: Physical Science Technician
 reviewed-by:
-  - name: Christina Cecelski
-    title: Deputy Group Leader, GSMG
-  - name: Jennifer Carney
-    title: Group Leader, GSMG
+  - name: Reviewer Name
+    title: Reviewer Title
 ---
 
 # Introduction
@@ -72,9 +70,9 @@ Hazard Review 646.03.0052: Compressed gas cylinder transport and use @GasSRMTech
 
 ## Equipment and Instrumentation
 
-* Thermo Scientific 42iQHL Chemiluminescence Analyzer (NIST #N121055)
-* COGAS #20
-* Keithly 2100 Digital Multimeter (NIST #1424390, NIST #1424246)
+* Instrument/Equipment 1
+* Instrument/Equipment 2
+* Instrument/Equipment 3
 
 ## Instrumental Methods
 
@@ -121,7 +119,6 @@ Hazard Review 646.03.0052: Compressed gas cylinder transport and use @GasSRMTech
 * Notebook 1
 * File 1
 * File 2
-* File 3
 
 {{< pagebreak >}}
 
