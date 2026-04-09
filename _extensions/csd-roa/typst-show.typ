@@ -25,7 +25,7 @@
   $endif$
   $if(assigned-value.value)$
     assigned-value: (
-      [$assigned-value.value$]
+      [#float($assigned-value.value$)]
       + sym.space.nobreak
       + sym.plus.minus
       + sym.space.nobreak

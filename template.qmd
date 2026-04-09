@@ -1,5 +1,5 @@
 ---
-roa-num: 646.GR-FY-XXX
+roa-num: 646.GN-FY-XXX
 submitted-to:
   person: First Last, Title
   association: Group or Division Name
@@ -58,7 +58,7 @@ reviewed-by:
 
 ## Safety
 
-Hazard Review 646.03.0052: Compressed gas cylinder transport and use @GasSRMTechSpecs.
+Hazard Reviews.
 
 ## Materials
 

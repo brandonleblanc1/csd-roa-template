@@ -60,7 +60,6 @@
   show link: underline
   // setting font for math equations
   show math.equation: set text(font: "$fonts.math.family$")
-  show sym.minus: set text(font: "$fonts.math.family$")
   // modifying how headings are displayed
   show heading: it => {
     let heading-size = 1em

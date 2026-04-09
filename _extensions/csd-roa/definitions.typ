@@ -189,13 +189,14 @@
 // Function to format SI units given a value and common unit.
 //
 // param: `content`
-//   Content to format. Should be specified as [`value` `units`], where `value` is the
-//   magnitude and `units` is one of the following: percent (or %), ppm, or ppb.
+//   Content to format. Should be specified as [`value` `units`], where
+//   `value` is the magnitude and `units` is one of the following: percent
+//   (or %), ppm, or ppb.
 #let make-units(
   content,
 ) = {
   content = content.text.split()
-  let value = content.at(0)
+  let value = [#float(content.at(0))]
   let units = content.at(1)
   
   let prefix = if units in ("percent", "%") {
@@ -223,8 +224,9 @@
 //
 // param: `sources`
 //   Content to format the references section. Should be specified as
-//   [`sources` `style`], where `sources` is either a .bib or Hayagriva .yml file
-//   containing references information, and `style` is a valid Typst style identifier.
+//   [`sources` `style`], where `sources` is either a .bib or Hayagriva .yml
+//   file containing references information, and `style` is a valid Typst
+//   style identifier.
 #let make-refs(
   sources,
 ) = {
