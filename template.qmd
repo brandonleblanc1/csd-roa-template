@@ -38,6 +38,8 @@ agreements: false
 approvals: false
 copies-to: false
 # Optional metadata end -------------------------------------------------------
+# Email address is assumed to be first.last@nist.gov. If email is different from
+# this convention, an `email` field can be provided below `title`.
 prepared-by:
   - name: Brandon LeBlanc
     title: Physical Science Technician
@@ -48,7 +50,128 @@ reviewed-by:
 
 # Introduction
 
-{{< lipsum 2 >}}
+This introduction is designed to give a brief overview of common markdown
+formatting tasks with Quarto. It is not designed to be exhaustive; the [Quarto
+guide](https://quarto.org/docs/guide) will be able to provide more examples and
+information.
+
+*italic text*, **bold text**, ***bold italic text***, super^script^, sub~script~
+
+Headings are shown throughout the document on the lines that begin with \#. One
+\# gives a level 1 heading, two \#s give a level 2 heading, etc.
+
+Quarto reserves certain symbols to specify markdown directives throughout the
+document, such as \* and \#. To insert these in normal text, they must be
+escaped (prepend a backslash).
+
+- Bulleted lists
+- must have a blank
+- line separating them
+  - from the surrounding text
+- or they won't render properly
+
+For unordered lists, you can either use the symbols that the Quarto documents
+show, or you can just use a regular hyphen. Both will work, as long as the
+correct spacing is maintained.
+
+Equations use LaTex syntax. You can have equations inline: $E = mc^{2}$.
+
+They can also be specified in their own block:
+
+$$
+i\hbar \frac{\partial}{\partial{t}} \Psi \left( x, t \right)
+  = \left[ -\frac{\hbar^{2}}{2m}
+  \frac{\partial^{2}}{\partial{x^{2}}} + V
+  \right] \Psi \left( x, t \right)
+$$ {#eq-tdse}
+
+@eq-tdse shows the Time-Dependent Schrödinger Equation, rendered in its own
+block.
+
+Tables can be created in a variety of ways.
+
+  | **header 1** | **header 2** | **header 3** |
+  | :----------: | :----------: | :----------: |
+  | row 1 col 1  | row 1 col 2  | row 1 col 3  |
+  | row 2 col 1  | row 2 col 2  | row 2 col 3  |
+
+  : Example of a pipe table. {#tbl-pipe-example tbl-align="center"}
+
+@tbl-pipe-example gives an example of a [pipe
+table](https://quarto.org/docs/authoring/tables.html#markdown-tables), which is
+the most common way of specifying a markdown table. The number of hyphens used
+indicate the relative widths of the columns. The pipes do not have to be aligned
+with one another or spaced consistently. The cell contents of pipe tables can
+only be single-line elements, and keeping track of the formatting gets pretty
+cumbersome.
+
+::: {#tbl-list-example .list-table aligns="c"}
+Example of a list table.
+
+- - **header 1**
+  - **header 2**
+  - **header 3**
+
+- - row 1 col 1
+  - row 1 col 2
+  - row 1 col 3
+
+- - row 2 col 1
+  - row 2 col 2
+  - row 2 col 3
+:::
+
+@tbl-list-example gives an example of a [list
+table](https://quarto.org/docs/authoring/tables.html#list-tables). This format
+is much more readable and user-friendly for entering the data. Each top-level
+item indicates a new row, and each nested item is a cell in that row. The cell
+contents of list tables can be any content, including block elements (lists,
+code cells, etc.) and multiline paragraphs.
+
+There are also [grid
+tables](https://quarto.org/docs/authoring/tables.html#grid-tables), which are
+similar to pipe tables but allow for arbitrary elements in the cells.
+Additionally, tables can be rendered programmatically using R or Python, which
+can be useful for reading in data from another file. This option requires using
+packages to output the data into a markdown format, and more details can be
+found [here](https://quarto.org/docs/authoring/tables.html#computations).
+
+Inserting figures is more straightforward, but there are a lot of layout
+customization options.
+
+![Defining the International System of Units
+(SI).](https://www.nist.gov/sites/default/files/images/2018/09/11/si_illustration_constants_colour_full.png){#fig-si fig-align="center" width=50%}
+
+@fig-si gives an example of inserting a figure with a caption. There are lots of
+ways to customize the layout of figures into multiple sub-figures, rows,
+columns, and panels. Like tables, figures can also be generated programmatically
+from R or Python, which is useful for including complex data visualizations in a
+report. Again, this requires the use of packages to generate the figures. More
+information on layouts and computed figures can be found
+[here](https://quarto.org/docs/authoring/figures.html).
+
+Throughout this introduction,
+[cross-references](https://quarto.org/docs/authoring/cross-references.html) were
+used on equations, tables, and figures by assigning them a label beginning with
+\# (e.g., \#eq-tdse). These labels can be used in the body to reference the
+specific item by replacing the \# with @. Equation labels must be prefixed with
+'eq', table labels with 'tbl', and figure labels with 'fig'. Quarto will
+automatically keep track of the order they appear in the text and keep the
+references current should that order change.
+
+**TO DO:**
+
+- More examples for utilizing
+  [references](https://quarto.org/docs/authoring/citations.html)
+  - See the link to get started, and note that there is already a 'refs.bib'
+    file in this template that can be updated with the relevant sources.
+- Change format of tables in Typst template.
+- Add examples of computations for tables and figures.
+  - [R info](https://quarto.org/docs/computations/r.html)
+  - [Python info](https://quarto.org/docs/computations/python.html)
+- Add examples for
+  [shortcodes](https://quarto.org/docs/authoring/shortcodes.html), specifically
+  for \`include\`, \`pagebreak\`, and possibly \`contents\`.
 
 # Traceability Statement
 
@@ -70,9 +193,9 @@ Hazard Reviews.
 
 ## Equipment and Instrumentation
 
-* Instrument/Equipment 1
-* Instrument/Equipment 2
-* Instrument/Equipment 3
+- Instrument/Equipment 1
+- Instrument/Equipment 2
+- Instrument/Equipment 3
 
 ## Instrumental Methods
 
@@ -116,9 +239,9 @@ Hazard Reviews.
 
 # Data Storage
 
-* Notebook 1
-* File 1
-* File 2
+- Notebook 1
+- File 1
+- File 2
 
 {{< pagebreak >}}
 

@@ -131,9 +131,9 @@
   }
 
   let new_title_block = block_with_new_content(
-    old_title_block, 
+    old_title_block,
     block_with_new_content(
-      old_title_block.body, 
+      old_title_block.body,
       old_title_block.body.body.children.at(0) +
       old_title_block.body.body.children.at(1) +
       new_title))
@@ -146,23 +146,23 @@
 // 2023-10-09: #fa-icon("fa-info") is not working, so we'll eval "#fa-info()" instead
 #let callout(body: [], title: "Callout", background_color: rgb("#dddddd"), icon: none, icon_color: black, body_background_color: white) = {
   block(
-    breakable: false, 
-    fill: background_color, 
-    stroke: (paint: icon_color, thickness: 0.5pt, cap: "round"), 
-    width: 100%, 
+    breakable: false,
+    fill: background_color,
+    stroke: (paint: icon_color, thickness: 0.5pt, cap: "round"),
+    width: 100%,
     radius: 2pt,
     block(
       inset: 1pt,
-      width: 100%, 
-      below: 0pt, 
+      width: 100%,
+      below: 0pt,
       block(
-        fill: background_color, 
-        width: 100%, 
+        fill: background_color,
+        width: 100%,
         inset: 8pt)[#text(icon_color, weight: 900)[#icon] #title]) +
       if(body != []){
         block(
-          inset: 1pt, 
-          width: 100%, 
+          inset: 1pt,
+          width: 100%,
           block(fill: body_background_color, width: 100%, inset: 8pt, body))
       }
     )
@@ -198,7 +198,7 @@
   content = content.text.split()
   let value = [#float(content.at(0))]
   let units = content.at(1)
-  
+
   let prefix = if units in ("percent", "%") {
     [c]
   } else if units == "ppm" {
@@ -208,7 +208,7 @@
   } else {
     panic("This unit has not been implemented!")
   }
-  
+
   (
     value
     + sym.space.nobreak
@@ -250,9 +250,9 @@
   if email == none {
     email = name.split().map(lower).join(".") + "@nist.gov"
   }
-  
+
   set par(justify: false)
-  
+
   // Adding mail emoji with mailto link
   (
     box(
@@ -285,16 +285,16 @@
   let count = authors.len()
   let rem = calc.rem(count, ncols)
   let empty = (title: "")
-  
+
   // Specifying where blank content should go depending on number of authors
   if rem != 0 and count != 1 {
     if rem == 1 {
       authors.insert(-3, empty)
     }
-    
+
     authors.insert(-1, empty)
   }
-  
+
   grid(
     align: left,
     columns: (1fr,) * ncols,
@@ -307,6 +307,16 @@
         } else []
       },
     )
+  )
+}
+
+// Function to display correct font for equation numberings.
+#let equation-numbering(
+  ..nums
+) = {
+  text(
+    font: $brand.typography.base.family$,
+    "(" + nums.pos().map(str).join() + ")"
   )
 }
 

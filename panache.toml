@@ -1,0 +1,15 @@
+flavor = "quarto"
+line-width = 80
+extend-exclude = [".git/"]
+
+[flavor-overrides]
+"README.md" = "gfm"
+
+[format]
+tab-width = 2
+
+[linters]
+r = "jarl"
+
+[formatters]
+r = "air"

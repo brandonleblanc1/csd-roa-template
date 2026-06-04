@@ -1,14 +1,18 @@
 # Decasify Package for Typst
 
-A thin wrapper around the [decasify](https://github.com/alerque/decasify) library providing Typst functions for locale and style guide aware text casing functions.
-Provides functions for title-case (and other cases) that adapt to the language of the current document context.
-Includes support for English, Spanish, and Turkish as well as multiple style guides.
+A thin wrapper around the [decasify](https://github.com/alerque/decasify)
+library providing Typst functions for locale and style guide aware text casing
+functions. Provides functions for title-case (and other cases) that adapt to the
+language of the current document context. Includes support for English, Spanish,
+and Turkish as well as multiple style guides.
 
 ## Example One
 
 * The heading in this example will automatically be converted to title case.
-* The body text is untouched, but a manual command is used to sentence case a whole phrase.
-* Changing the text language, we show using the functions again will follow the new language rules.
+* The body text is untouched, but a manual command is used to sentence case a
+  whole phrase.
+* Changing the text language, we show using the functions again will follow the
+  new language rules.
 
 ```typst
 #import "@preview/decasify:0.11.3": *
@@ -42,7 +46,8 @@ Observe that the notorious Turkish-İ problem is handled during titlecasing:
 ## Example Two
 
 * Using the same input samples, iterate all four possible output cases.
-* Use language specific rules for each sample highlighting how character handling is different.
+* Use language specific rules for each sample highlighting how character
+  handling is different.
 
 ```typst
 #import "@preview/decasify:0.11.3": *
@@ -89,8 +94,9 @@ Observe that the notorious Turkish-İ problem is handled during titlecasing:
 
 ## Style Options
 
-Extra options can be passed to modify the case transformation style.
-For example you can pass an array of words in the exact case you want them output to override the normal casing rules.
+Extra options can be passed to modify the case transformation style. For example
+you can pass an array of words in the exact case you want them output to
+override the normal casing rules.
 
 ```typst
 #import "@preview/decasify:0.11.3": *

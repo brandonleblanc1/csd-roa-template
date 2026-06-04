@@ -1,5 +1,5 @@
 // Main Report of Analysis template.
-// 
+//
 #let report-template(
   roa-num,
   submitted-to,
@@ -59,7 +59,7 @@
   // underline links
   show link: underline
   // setting font for math equations
-  show math.equation: set text(font: "$fonts.math.family$")
+  show math.equation: set text(font: "$fonts.math-font$")
   // modifying how headings are displayed
   show heading: it => {
     let heading-size = 1em
@@ -68,7 +68,7 @@
     let heading-weight = "regular"
     let heading-style = "normal"
     let heading-content = [#sentencecase(it.body)]
-    
+
     if it.level == 1 {
       heading-size = 1.2em
       heading-scale = 1.4
@@ -94,7 +94,7 @@
       ),
     )
   }
-  
+
   // customizing the cover page of the ROA
   {
     set page(
@@ -142,7 +142,7 @@
         )
       )
     )
-    
+
     align(
       center,
       block(

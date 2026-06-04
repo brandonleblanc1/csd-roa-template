@@ -4,28 +4,23 @@ meta:
     short: NIST
 typography:
   fonts:
-    - family: Optima
+    - family: Carlito
       source: file
       files:
-        - path: assets/fonts/optima/Optima.ttf
-        - path: assets/fonts/optima/Optima-Italic.ttf
+        - path: assets/fonts/carlito/Carlito-Regular.ttf
+        - path: assets/fonts/carlito/Carlito-Italic.ttf
           style: italic
-        - path: assets/fonts/optima/Optima-Bold.ttf
+        - path: assets/fonts/carlito/Carlito-Bold.ttf
           weight: bold
-    - family: EB Garamond
-      source: file
-      files:
-        - path: assets/fonts/eb_garamond/EBGaramond.ttf
-        - path: assets/fonts/eb_garamond/EBGaramond-Italic.ttf
+        - path: assets/fonts/carlito/Carlito-BoldItalic.ttf
+          weight: bold
           style: italic
-        - path: assets/fonts/eb_garamond/EBGaramond-Bold.ttf
-          weight: bold
-    - family: Garamond-Math
+    - family: Asana Math
       source: file
       files:
-        - path: assets/fonts/garamond_math/Garamond-Math.otf
+        - path: assets/fonts/asana-math/Asana-Math.otf
   base:
-    family: EB Garamond
+    family: Carlito
     size: 11pt
   headings:
-    family: Optima
+    family: Carlito
