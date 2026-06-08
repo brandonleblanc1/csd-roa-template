@@ -68,7 +68,8 @@ escaped (prepend a backslash).
 - must have a blank
 - line separating them
   - from the surrounding text
-- or they won't render properly
+    - or they won't
+- render properly
 
 For unordered lists, you can either use the symbols that the Quarto documents
 show, or you can just use a regular hyphen. Both will work, as long as the
@@ -87,6 +88,14 @@ $$ {#eq-tdse}
 
 @eq-tdse shows the Time-Dependent Schrödinger Equation, rendered in its own
 block.
+
+Here's a second equation example:
+
+$$
+a^2 + b^2 = c^2
+$$ {#eq-pythag}
+
+@eq-pythag shows the Pythagorean Theorem.
 
 Tables can be created in a variety of ways.
 
@@ -108,9 +117,9 @@ cumbersome.
 ::: {#tbl-list-example .list-table aligns="c"}
 Example of a list table.
 
-- - **header 1**
-  - **header 2**
-  - **header 3**
+- - header 1
+  - header 2
+  - header 3
 
 - - row 1 col 1
   - row 1 col 2
@@ -165,7 +174,6 @@ references current should that order change.
   [references](https://quarto.org/docs/authoring/citations.html)
   - See the link to get started, and note that there is already a 'refs.bib'
     file in this template that can be updated with the relevant sources.
-- Change format of tables in Typst template.
 - Add examples of computations for tables and figures.
   - [R info](https://quarto.org/docs/computations/r.html)
   - [Python info](https://quarto.org/docs/computations/python.html)

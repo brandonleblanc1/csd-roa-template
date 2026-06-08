@@ -1,5 +1,4 @@
 // Main Report of Analysis template.
-//
 #let report-template(
   roa-num,
   submitted-to,
@@ -19,7 +18,7 @@
   copies-to: none,
   prepared-by,
   reviewed-by,
-  doc
+  doc,
 ) = {
   // setting general properties associated with body text
   set text(
@@ -45,6 +44,8 @@
     },
   )
   set rect(inset: 0pt)
+  // underline links
+  show link: underline
   // customizing how bibliography is shown
   set bibliography(title: none)
   show bibliography: it => {
@@ -54,12 +55,24 @@
   // changing indentation style of bulleted lists
   set list(
     indent: 0.25in,
-    body-indent: 1.5em
+    body-indent: 1em,
+    marker: ([•], [◦], [--]),
   )
-  // underline links
-  show link: underline
   // setting font for math equations
   show math.equation: set text(font: "$fonts.math-font$")
+  // changing how equation references are rendered
+  show ref: it => {
+    let elem = it.element
+    let eq = math.equation
+
+    if elem != none and elem.func() == eq {
+      let eq-ref = it.supplement + [ #counter(eq).at(elem.location()).at(0)]
+      show underline: it => it.body
+      link(elem.location(), eq-ref)
+    } else {
+      it
+    }
+  }
   // modifying how headings are displayed
   show heading: it => {
     let heading-size = 1em
@@ -90,9 +103,24 @@
         size: heading-size / heading-scale,
         weight: heading-weight,
         style: heading-style,
-        heading-content
+        heading-content,
       ),
     )
+  }
+  // setting border style for tables
+  set table(
+    stroke: (_, y) => (
+      top: if y <= 1 { 0.8pt } else { 0pt },
+      bottom: 0.8pt,
+    ),
+  )
+  // showing table header row as bold
+  show table.cell.where(y: 0): set text(weight: "bold")
+  // showing figure and table prefixes as bold
+  show figure.caption: it => {
+    let num = context it.counter.display(it.numbering)
+    let prefix = it.supplement + sym.space + num + it.separator
+    text(weight: "bold", prefix) + it.body
   }
 
   // customizing the cover page of the ROA
@@ -110,7 +138,7 @@
             width: 2.5in,
           ),
         ),
-      )
+      ),
     )
 
     align(
@@ -125,9 +153,9 @@
             Material Measurement Laboratory \
             Chemical Sciences Division \
             Gaithersburg, MD 20899
-          ]
-        )
-      )
+          ],
+        ),
+      ),
     )
 
     align(
@@ -138,17 +166,17 @@
           font: $brand.typography.headings.family$,
           size: 1.8em,
           weight: "bold",
-          [REPORT OF ANALYSIS]
-        )
-      )
+          [REPORT OF ANALYSIS],
+        ),
+      ),
     )
 
     align(
       center,
       block(
         below: 0.3in,
-        today-date
-      )
+        today-date,
+      ),
     )
 
     show grid.cell.where(x: 0): set text(weight: "bold")
@@ -156,21 +184,21 @@
     grid(
       columns: (1fr, 3fr),
       row-gutter: 1em,
-      [Submitted to:],                                          submitted-to,
-      [Title:],                                                 title,
-      [Purpose:],                                               purpose,
-      [Date(s) of Lab Work:],                                   lab-dates,
-      [Method(s):],                                             methods,
-      [Control(s):],                                            controls,
-      [Quality Documents:],                                     quality-docs,
-      [SRM(s):],                                                if srms != none {srms} else [NA],
-      [Constituent(s):],                                        if constituents != none {constituents} else [NA],
-      [Assigned Value  (#math.equation(math.italic[k = 2])):],  if assigned-value != none {assigned-value} else [NA],
-      [Expiration Date:],                                       if exp-date != none {exp-date} else [NA],
-      [Collaborator(s):],                                       if collaborators != none {collaborators} else [NA],
-      [Agreements:],                                            if agreements != none {agreements} else [NA],
-      [Approvals:],                                             if approvals != none {approvals} else [NA],
-      [Copies to:],                                             if copies-to != none {copies-to} else [NA]
+      [Submitted to:], submitted-to,
+      [Title:], title,
+      [Purpose:], purpose,
+      [Date(s) of Lab Work:], lab-dates,
+      [Method(s):], methods,
+      [Control(s):], controls,
+      [Quality Documents:], quality-docs,
+      [SRM(s):], if srms != none { srms } else [NA],
+      [Constituent(s):], if constituents != none { constituents } else [NA],
+      [Assigned Value  (#math.equation(math.italic[k = 2])):], if assigned-value != none { assigned-value } else [NA],
+      [Expiration Date:], if exp-date != none { exp-date } else [NA],
+      [Collaborator(s):], if collaborators != none { collaborators } else [NA],
+      [Agreements:], if agreements != none { agreements } else [NA],
+      [Approvals:], if approvals != none { approvals } else [NA],
+      [Copies to:], if copies-to != none { copies-to } else [NA],
     )
 
     show grid.cell: set text(weight: "regular")
