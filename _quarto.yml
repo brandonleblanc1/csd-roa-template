@@ -7,10 +7,9 @@ functions:
   - titlecase
   - make-units
   - make-refs
-bibliography: refs.bib
+references: refs.yml
+references-style: american-physics-society
 fig-dpi: 300
-fig-cap-location: bottom
-tbl-cap-location: top
 execute:
   echo: false
   warning: false

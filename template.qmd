@@ -75,9 +75,9 @@ For unordered lists, you can either use the symbols that the Quarto documents
 show, or you can just use a regular hyphen. Both will work, as long as the
 correct spacing is maintained.
 
-Equations use LaTex syntax. You can have equations inline: $E = mc^{2}$.
+Equations use LaTex syntax. You can have equations as inline math: $E = mc^{2}$.
 
-They can also be specified in their own block:
+They can also be specified in their own block (display math):
 
 $$
 i\hbar \frac{\partial}{\partial{t}} \Psi \left( x, t \right)
@@ -99,10 +99,10 @@ $$ {#eq-pythag}
 
 Tables can be created in a variety of ways.
 
-  | **header 1** | **header 2** | **header 3** |
-  | :----------: | :----------: | :----------: |
-  | row 1 col 1  | row 1 col 2  | row 1 col 3  |
-  | row 2 col 1  | row 2 col 2  | row 2 col 3  |
+  | header 1    | header 2    | header 3    |
+  | :---------: | :---------: | :---------: |
+  | row 1 col 1 | row 1 col 2 | row 1 col 3 |
+  | row 2 col 1 | row 2 col 2 | row 2 col 3 |
 
   : Example of a pipe table. {#tbl-pipe-example tbl-align="center"}
 
@@ -251,9 +251,8 @@ Hazard Reviews.
 - File 1
 - File 2
 
-{{< pagebreak >}}
-
 # References
 
-::: {#refs}
+::: {.make-refs}
+{{< meta references >}} {{< meta references-style >}}
 :::
