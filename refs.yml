@@ -1,0 +1,132 @@
+gas-qm:
+  type: report
+  title: Gas Sensing Metrology Group Quality Manual
+  author: Gas Sensing Metrology Group
+  organization: National Institute of Standards and Technology
+  date: 2024-10-08
+  genre: Quality Manual
+  serial-number: QM-III-646.03 v15.01
+  note: Found at Quality Documentation/Group_Specific_Quality_Documentation/03_GSMG/GSMG QM III
+  parent:
+    type: repository
+    title: Chemical Sciences Division SharePoint
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+gas-tp-qa:
+  type: report
+  title: Technical Procedure 646.03.11D for Quality Assurance Testing of Warehoused Standard Reference Materials, Lot Standards and Working Standards
+  author: Gas Sensing Metrology Group
+  organization: National Institute of Standards and Technology
+  date: 2022-03-24
+  genre: Technical Procedure
+  serial-number: 646.03.11D v5
+  note: Found at Quality Documentation/Group_Specific_Quality_Documentation/03_GSMG/GSMG Technical Procedures
+  parent:
+    type: repository
+    title: Chemical Sciences Division SharePoint
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+gas-srm-tech-specs:
+  type: report
+  title: Technical Specifications for Gaseous SRMs
+  author: Gas Sensing Metrology Group
+  organization: National Institute of Standards and Technology
+  date: 2020-08-10
+  note: Found at Quality Documentation/Group_Specific_Quality_Documentation/03_GSMG/GSMG Referenced NIST Documents/Technical Specifications for Gas SRMs
+  parent:
+    type: repository
+    title: Chemical Sciences Division SharePoint
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+nsp-260-136:
+  type: report
+  title: Metrological Tools for the Reference Materials and Reference Instruments of the NIST Material Measurement Laboratory
+  author:
+    - Beauchamp, Carlos R.
+    - Camara, Johanna E.
+    - Carney, Jennifer
+    - Choquette, Steven J.
+    - Cole, Kenneth D.
+    - DeRose, Paul C.
+    - Deuwer, David L.
+    - Epstein, Michael S.
+    - Kline, Margaret C.
+    - Lippa, Katrice A.
+    - Lucon, Enrico
+    - Molloy, John
+    - Nelson, Michael A.
+    - Phinney, Karen W.
+    - Polakoski, Maria
+    - Possolo, Antonio
+    - Sander, Lane C.
+    - Schiel, John E.
+    - Sharpless, Katherine E.
+    - Toman, Blaza
+    - Winchester, Michael R.
+    - Windover, Donald
+  edition: 2021 Edition
+  organization: National Institute of Standards and Technology
+  date: 2021-09-16
+  genre: NIST Special Publication
+  serial-number:
+    serial: 260-136-2021
+    doi: 10.6028/NIST.SP.260-136-2021
+  page-total: 66
+ccqm-k71-nist:
+  type: report
+  title: NIST Measurement Report
+  author:
+    - LeBlanc, Brandon
+    - Awan, Iftikhar
+    - Cecelski, Christina E.
+    - Carney, Jennifer
+  organization: National Institute of Standards and Technology
+  date: 2026-04-03
+  genre: International Comparison
+  serial-number: CCQM-K71.2024
+  note: To be published as part of the CCQM-K71.2024 final report
+  parent:
+    type: repository
+    url: file://elwood.nist.gov/646/internal/MML639_03/CCQM/K71.2024/reports
+dark-eiv:
+  type: article
+  title: Errors-in-variables calibration with dark uncertainty
+  author:
+    - Cecelski, Christina E.
+    - Toman, Blaza
+    - Liu, Fong-Ha
+    - Meija, Juris
+    - Possolo, Antonio
+  date: 2022-06-16
+  serial-number:
+    doi: 10.1088/1681-7575/ac711c
+  page-total: 17
+  parent:
+    type: periodical
+    title: Metrologia
+    volume: 59
+    issue: 4
+    publisher: IOP Publishing
+srm1693a-lotN-cert:
+  type: report
+  title: Certification of Gaseous SRM 1693a, Series N
+  author: Kelley, Michael E.
+  organization: National Institute of Standards and Technology
+  date: 2016-03-23
+  genre: Report of Analysis
+  serial-number: 646.03-16-063
+  note: Found at Quality Documentation/Reports_of_Analysis_(ROAs)/03_GSMG/646.03-16-063
+  parent:
+    type: repository
+    title: Chemical Sciences Division SharePoint
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+srm1693a-lotN-qa1:
+  type: report
+  title: Quality Assurance Testing of Samples of Standard Reference Material SRM 1693a (Series N)
+  author: Harris, Kimberly J.
+  organization: National Institute of Standards and Technology
+  date: 2019-06-27
+  genre: Report of Analysis
+  serial-number: 646.03-19-074
+  note: Found at Quality Documentation/Reports_of_Analysis_(ROAs)/03_GSMG
+  parent:
+    type: repository
+    title: Chemical Sciences Division SharePoint
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
