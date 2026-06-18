@@ -2,10 +2,6 @@ project:
   type: csd-roa
 format: csd-roa-typst
 functions:
-  - align
-  - text
-  - titlecase
-  - make-units
   - make-refs
 references: refs.yml
 references-style: american-physics-society

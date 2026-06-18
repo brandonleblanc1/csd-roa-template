@@ -342,6 +342,7 @@ $endif$
   }
 
   set par(justify: false)
+  show underline: it => it.body
 
   // Adding mail emoji with mailto link
   (
