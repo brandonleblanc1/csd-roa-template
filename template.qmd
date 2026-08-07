@@ -7,7 +7,11 @@ cover-title:
   line1: Title Line 1
   # Including `line2` is optional; set to `false` if not needed
   line2: false
+author-list:
+  - Brandon LeBlanc
+methods: Sample preparation and/or instrumental methods used
 purpose: Brief statement specifying purpose of the ROA
+controls-used: Control samples used
 lab-dates:
   from:
     day: 1
@@ -17,27 +21,7 @@ lab-dates:
     day: 1
     month: 1
     year: 9999
-methods: Sample preparation and/or instrumental methods used
-controls-used: Control samples used
 quality-docs: Applicable quality manuals and technical procedures
-# Optional metadata begin -----------------------------------------------------
-# The following should be specified only if applicable; set to `false` if not needed
-srms: false
-constituents: false
-assigned-value:
-  value: false
-  uncertainty: false
-  # `units` should be specified by their common name (e.g., ppm, ppb, percent, or %)
-  units: false
-exp-date:
-  day: false
-  month: false
-  year: false
-collaborators: false
-agreements: false
-approvals: false
-copies-to: false
-# Optional metadata end -------------------------------------------------------
 # Email address is assumed to be first.last@nist.gov. If email is different from
 # this convention, an `email` field can be provided below `title`.
 prepared-by:
@@ -46,6 +30,22 @@ prepared-by:
 reviewed-by:
   - name: Reviewer Name
     title: Reviewer Title
+# Optional metadata begin -----------------------------------------------------
+# The following should be specified only if applicable; set to `false` if not needed
+srms: false
+assigned-value:
+  value: false
+  uncertainty: false
+  units: false
+exp-date:
+  day: false
+  month: false
+  year: false
+constituents: false
+collaborators: false
+agreements: false
+approvals: false
+copies-to: false
 ---
 
 # Introduction
@@ -81,9 +81,9 @@ They can also be specified in their own block (display math):
 
 $$
 i\hbar \frac{\partial}{\partial{t}} \Psi \left( x, t \right)
-  = \left[ -\frac{\hbar^{2}}{2m}
-  \frac{\partial^{2}}{\partial{x^{2}}} + V
-  \right] \Psi \left( x, t \right)
+    = \left[ -\frac{\hbar^{2}}{2m}
+    \frac{\partial^{2}}{\partial{x^{2}}} + V
+    \right] \Psi \left( x, t \right)
 $$ {#eq-tdse}
 
 @eq-tdse shows the Time-Dependent Schrödinger Equation, rendered in its own
@@ -172,7 +172,7 @@ references current should that order change.
 
 - More examples for utilizing
   [references](https://quarto.org/docs/authoring/citations.html)
-  - See the link to get started, and note that there is already a 'refs.bib'
+  - See the link to get started, and note that there is already a 'refs.yml'
     file in this template that can be updated with the relevant sources.
 - Add examples of computations for tables and figures.
   - [R info](https://quarto.org/docs/computations/r.html)

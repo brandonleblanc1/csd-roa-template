@@ -15,10 +15,12 @@ typography:
         - path: assets/fonts/carlito/Carlito-BoldItalic.ttf
           weight: bold
           style: italic
-    - family: Asana Math
+    - family: Lete Sans Math
       source: file
       files:
-        - path: assets/fonts/asana-math/Asana-Math.otf
+        - path: assets/fonts/lete-sans-math/LeteSansMath.otf
+        - path: assets/fonts/lete-sans-math/LeteSansMath-Bold.otf
+          weight: bold
   base:
     family: Carlito
     size: 11pt

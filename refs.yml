@@ -6,11 +6,10 @@ gas-qm:
   date: 2024-10-08
   genre: Quality Manual
   serial-number: QM-III-646.03 v15.01
-  note: Found at Quality Documentation/Group_Specific_Quality_Documentation/03_GSMG/GSMG QM III
   parent:
     type: repository
     title: Chemical Sciences Division SharePoint
-    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision/QD/Group_Specific_Quality_Documentation/03_GSMG/GSMG QM III
 gas-tp-qa:
   type: report
   title: Technical Procedure 646.03.11D for Quality Assurance Testing of Warehoused Standard Reference Materials, Lot Standards and Working Standards
@@ -19,22 +18,20 @@ gas-tp-qa:
   date: 2022-03-24
   genre: Technical Procedure
   serial-number: 646.03.11D v5
-  note: Found at Quality Documentation/Group_Specific_Quality_Documentation/03_GSMG/GSMG Technical Procedures
   parent:
     type: repository
     title: Chemical Sciences Division SharePoint
-    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision/QD/Group_Specific_Quality_Documentation/03_GSMG/GSMG Technical Procedures
 gas-srm-tech-specs:
   type: report
   title: Technical Specifications for Gaseous SRMs
   author: Gas Sensing Metrology Group
   organization: National Institute of Standards and Technology
   date: 2020-08-10
-  note: Found at Quality Documentation/Group_Specific_Quality_Documentation/03_GSMG/GSMG Referenced NIST Documents/Technical Specifications for Gas SRMs
   parent:
     type: repository
     title: Chemical Sciences Division SharePoint
-    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision/QD/Group_Specific_Quality_Documentation/03_GSMG/GSMG Referenced NIST Documents/Technical Specifications for Gas SRMs
 nsp-260-136:
   type: report
   title: Metrological Tools for the Reference Materials and Reference Instruments of the NIST Material Measurement Laboratory
@@ -61,12 +58,11 @@ nsp-260-136:
     - Toman, Blaza
     - Winchester, Michael R.
     - Windover, Donald
-  edition: 2021 Edition
   organization: National Institute of Standards and Technology
   date: 2021-09-16
   genre: NIST Special Publication
   serial-number:
-    serial: 260-136-2021
+    serial: 260-136 2021 Edition
     doi: 10.6028/NIST.SP.260-136-2021
   page-total: 66
 ccqm-k71-nist:
@@ -84,6 +80,7 @@ ccqm-k71-nist:
   note: To be published as part of the CCQM-K71.2024 final report
   parent:
     type: repository
+    title: Elwood File Server
     url: file://elwood.nist.gov/646/internal/MML639_03/CCQM/K71.2024/reports
 dark-eiv:
   type: article
@@ -112,11 +109,10 @@ srm1693a-lotN-cert:
   date: 2016-03-23
   genre: Report of Analysis
   serial-number: 646.03-16-063
-  note: Found at Quality Documentation/Reports_of_Analysis_(ROAs)/03_GSMG/646.03-16-063
   parent:
     type: repository
     title: Chemical Sciences Division SharePoint
-    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision/QD/Reports_of_Analysis_(ROAs)/03_GSMG/FY2016/646.03-16-063
 srm1693a-lotN-qa1:
   type: report
   title: Quality Assurance Testing of Samples of Standard Reference Material SRM 1693a (Series N)
@@ -125,8 +121,7 @@ srm1693a-lotN-qa1:
   date: 2019-06-27
   genre: Report of Analysis
   serial-number: 646.03-19-074
-  note: Found at Quality Documentation/Reports_of_Analysis_(ROAs)/03_GSMG
   parent:
     type: repository
     title: Chemical Sciences Division SharePoint
-    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision
+    url: https://nistgov.sharepoint.com/sites/ChemicalSciencesDivision/QD/Reports_of_Analysis_(ROAs)/03_GSMG/FY2019/646.03-19-074

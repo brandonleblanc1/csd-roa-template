@@ -3,21 +3,22 @@
   roa-num,
   submitted-to,
   title,
-  purpose,
-  lab-dates,
+  author-list,
   methods,
+  purpose,
   controls,
+  lab-dates,
   quality-docs,
+  prepared-by,
+  reviewed-by,
   srms: none,
-  constituents: none,
   assigned-value: none,
   exp-date: none,
+  constituents: none,
   collaborators: none,
   agreements: none,
   approvals: none,
   copies-to: none,
-  prepared-by,
-  reviewed-by,
   doc,
 ) = {
   // setting general properties associated with body text
@@ -40,7 +41,7 @@
     footer: context {
       let current = counter(page).display()
       let total = counter(page).final().first()
-      align(center, [Page #current of #total])
+      if int(current) > 1 { align(center, [Page #current of #total]) }
     },
   )
   set rect(inset: 0pt)
@@ -80,13 +81,12 @@
     let heading-scale = 1
     let heading-weight = "regular"
     let heading-style = "normal"
-    let heading-content = [#sentencecase(it.body)]
+    let heading-content = [#titlecase(it.body)]
 
     if it.level == 1 {
       heading-size = 1.2em
       heading-scale = 1.4
       heading-weight = "bold"
-      heading-content = [#titlecase(it.body)]
     } else if it.level == 2 {
       heading-size = 1.1em
       heading-scale = 1.2
@@ -94,6 +94,7 @@
       heading-style = "italic"
     } else if it.level == 3 {
       heading-style = "italic"
+      heading-content = [#sentencecase(it.body)]
     }
 
     block(
@@ -186,16 +187,17 @@
       row-gutter: 1em,
       [Submitted to:], submitted-to,
       [Title:], title,
-      [Purpose:], purpose,
-      [Date(s) of Lab Work:], lab-dates,
-      [Method(s):], methods,
-      [Control(s):], controls,
-      [Quality Documents:], quality-docs,
+      [Author(s):], author-list.join(", "),
       [SRM(s):], if srms != none { srms } else [NA],
-      [Constituent(s):], if constituents != none { constituents } else [NA],
       [Assigned Value  (#math.equation(math.italic[k = 2])):], if assigned-value != none { assigned-value } else [NA],
       [Expiration Date:], if exp-date != none { exp-date } else [NA],
+      [Method(s):], methods,
+      [Constituent(s):], if constituents != none { constituents } else [NA],
+      [Purpose:], purpose,
+      [Control(s):], controls,
+      [Date(s) of Lab Work:], lab-dates,
       [Collaborator(s):], if collaborators != none { collaborators } else [NA],
+      [Quality Documents:], quality-docs,
       [Agreements:], if agreements != none { agreements } else [NA],
       [Approvals:], if approvals != none { approvals } else [NA],
       [Copies to:], if copies-to != none { copies-to } else [NA],

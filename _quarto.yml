@@ -4,7 +4,7 @@ format: csd-roa-typst
 functions:
   - make-refs
 references: refs.yml
-references-style: american-physics-society
+references-style: ieee
 fig-dpi: 300
 execute:
   echo: false
