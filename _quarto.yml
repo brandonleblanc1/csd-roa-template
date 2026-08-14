@@ -3,6 +3,8 @@ project:
 format: csd-roa-typst
 functions:
   - make-refs
+  - align
+  - text
 references: refs.yml
 references-style: ieee
 fig-dpi: 300

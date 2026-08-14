@@ -1,17 +1,25 @@
 ---
 roa-num: 646.GN-FY-XXX
-submitted-to:
-  person: First Last, Title
-  association: Group or Division Name
-cover-title:
-  line1: Title Line 1
-  # Including `line2` is optional; set to `false` if not needed
-  line2: false
-author-list:
+amendment: false
+submitted-to: |-
+  First Last, Title
+
+  Group or Division Name
+
+  Optional Address Line 1
+
+  Optional Address Line 2
+cover-title: |-
+  Title Line 1
+
+  Optional Title Line 2
+authors-list:
   - Brandon LeBlanc
-methods: Sample preparation and/or instrumental methods used
+methods-list:
+  - Sample preparation and/or instrumental methods used
 purpose: Brief statement specifying purpose of the ROA
-controls-used: Control samples used
+controls-list:
+  - Control samples used
 lab-dates:
   from:
     day: 1
@@ -21,18 +29,24 @@ lab-dates:
     day: 1
     month: 1
     year: 9999
-quality-docs: Applicable quality manuals and technical procedures
+qualdocs-list:
+  - Quality Manual
+  - Technical Procedure
+prepared-by:
 # Email address is assumed to be first.last@nist.gov. If email is different from
 # this convention, an `email` field can be provided below `title`.
-prepared-by:
   - name: Brandon LeBlanc
     title: Physical Science Technician
 reviewed-by:
-  - name: Reviewer Name
-    title: Reviewer Title
+  - name: Christina E. Cecelski
+    title: Deputy Leader, Gas Sensing Metrology Group
+  - name: Other Reviewer
+    title: Important Position
 # Optional metadata begin -----------------------------------------------------
 # The following should be specified only if applicable; set to `false` if not needed
-srms: false
+srms-list:
+  - SRM 1
+  - SRM 2
 assigned-value:
   value: false
   uncertainty: false
@@ -41,12 +55,45 @@ exp-date:
   day: false
   month: false
   year: false
-constituents: false
-collaborators: false
-agreements: false
-approvals: false
-copies-to: false
+constituents-list:
+  - Compound 1
+  - Compound 2
+  - Nitrogen balance
+collaborators-list: false
+agreements-list: false
+approvals-list: false
+copies-to: |-
+  Copies to line 1
+
+  Copies to line 2
 ---
+
+::: {.content-hidden unless-meta="amendment"}
+::::: {.align arguments="center"}
+::::::: {.text arguments="size: 1.8em"}
+**Amendment Change Log**
+:::::::
+:::::
+
+This Report of Analysis (ROA) is an amendment of a previously published ROA,
+646.GN-FY-XXX, dated 01 January 9999.
+
+::::: {.list-table}
+- - Type of Edit
+  - Change
+  - Location
+
+- - Technical
+  - Correction to instrument method used.
+  - p. 4
+
+- - Editorial
+  - Specification that impurity values are reported as informational values.
+  - Table 4
+:::::
+
+{{< pagebreak >}}
+:::
 
 # Introduction
 
@@ -80,10 +127,10 @@ Equations use LaTex syntax. You can have equations as inline math: $E = mc^{2}$.
 They can also be specified in their own block (display math):
 
 $$
-i\hbar \frac{\partial}{\partial{t}} \Psi \left( x, t \right)
-    = \left[ -\frac{\hbar^{2}}{2m}
-    \frac{\partial^{2}}{\partial{x^{2}}} + V
-    \right] \Psi \left( x, t \right)
+  i\hbar \frac{\partial}{\partial{t}} \Psi \left( x, t \right)
+      = \left[ -\frac{\hbar^{2}}{2m}
+      \frac{\partial^{2}}{\partial{x^{2}}} + V
+      \right] \Psi \left( x, t \right)
 $$ {#eq-tdse}
 
 @eq-tdse shows the Time-Dependent Schrödinger Equation, rendered in its own
@@ -92,7 +139,7 @@ block.
 Here's a second equation example:
 
 $$
-a^2 + b^2 = c^2
+  a^2 + b^2 = c^2
 $$ {#eq-pythag}
 
 @eq-pythag shows the Pythagorean Theorem.
@@ -172,8 +219,11 @@ references current should that order change.
 
 - More examples for utilizing
   [references](https://quarto.org/docs/authoring/citations.html)
-  - See the link to get started, and note that there is already a 'refs.yml'
-    file in this template that can be updated with the relevant sources.
+  - See the link to get started.
+  - Note that there is already a 'refs.yml' file that can be updated with the
+    relevant sources. See Hyagriva YAML
+    [documentation](https://github.com/typst/hayagriva/blob/main/docs/file-format.md)
+    for more information about the formatting.
 - Add examples of computations for tables and figures.
   - [R info](https://quarto.org/docs/computations/r.html)
   - [Python info](https://quarto.org/docs/computations/python.html)
@@ -247,9 +297,7 @@ Hazard Reviews.
 
 # Data Storage
 
-- Notebook 1
-- File 1
-- File 2
+- File location with link
 
 # References
 

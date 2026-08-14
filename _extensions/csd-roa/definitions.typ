@@ -338,7 +338,13 @@ $endif$
   email: none,
 ) = {
   if email == none {
-    email = name.split().map(lower).join(".") + "@nist.gov"
+    email = (
+      arr => (arr.first(), arr.last()).join(".") + "@nist.gov"
+    )(
+      name.split().map(lower),
+    )
+  } else {
+    email = email.replace("\\", "")
   }
 
   set par(justify: false)

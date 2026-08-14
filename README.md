@@ -37,8 +37,9 @@ throughout the [main guide](https://quarto.org/docs/guide/).
 ### Prerequisites
 
 - An installation of the [Quarto CLI](https://quarto.org/docs/get-started/)
-  (version 1.9.29 or above) for your system. This can either be downloaded from
-  the website or installed from a package manager, such as `winget` or `uv`.
+  (version 1.10.18 or above) for your system. This can either be downloaded from
+  the website or installed from a package manager (highly recommended), such as
+  `winget` or `uv`.
 - A text editor (Notepad or similar) or interactive development environment
   (IDE) ([RStudio](https://posit.co/download/rstudio-desktop/), [VS
   Code](https://code.visualstudio.com/download)) of your choice. IDEs are
@@ -52,12 +53,12 @@ throughout the [main guide](https://quarto.org/docs/guide/).
 
 ### Project Setup
 
-Project setup will need to happen from a terminal application (command prompt on
-Windows). After launching, you will start in your home directory by default, and
-the rest of this example assumes you will be creating the template in your home
-directory. To create the template in a different directory, such as OneDrive,
-make sure you are in that directory first by typing the following and pressing
-enter (folders and file names with spaces need to be quoted):
+Project setup will need to happen from a terminal application (command prompt or
+Git Bash on Windows). After launching, you will start in your home directory by
+default, and the rest of this example assumes you will be creating the template
+in your home directory. To create the template in a different directory, such as
+OneDrive, make sure you are in that directory first by typing the following and
+pressing enter (folders and file names with spaces need to be quoted):
 
 ```bash
 cd "OneDrive - NIST"

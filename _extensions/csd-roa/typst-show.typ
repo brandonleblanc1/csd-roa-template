@@ -1,15 +1,23 @@
 #show: doc => report-template(
   [$roa-num$],
-  [$submitted-to.person$ \ $submitted-to.association$],
-  [$cover-title.line1$$if(cover-title.line2)$ \ $cover-title.line2$$endif$],
+  [$submitted-to$],
+  [$cover-title$],
   (
-    $for(author-list)$
+    $for(authors-list)$
     "$it$",
     $endfor$
   ),
-  [$methods$],
+  (
+    $for(methods-list)$
+    "$it$",
+    $endfor$
+  ),
   [$purpose$],
-  [$controls-used$],
+  (
+    $for(controls-list)$
+    "$it$",
+    $endfor$
+  ),
   [
     #format-date(datetime(
       day: $lab-dates.from.day$,
@@ -21,7 +29,11 @@
       year: $lab-dates.to.year$,
     ))
   ],
-  [$quality-docs$],
+  (
+    $for(qualdocs-list)$
+    "$it$",
+    $endfor$
+  ),
   (
     $for(prepared-by)$
       (
@@ -40,8 +52,12 @@
       ),
     $endfor$
   ),
-  $if(srms)$
-    srms: [$srms$],
+  $if(srms-list)$
+    srms: (
+      $for(srms-list)$
+      "$it$",
+      $endfor$
+    ),
   $endif$
   $if(assigned-value.value)$
     assigned-value: (
@@ -63,17 +79,33 @@
       ))
     ],
   $endif$
-  $if(constituents)$
-    constituents: [$constituents$],
+  $if(constituents-list)$
+    constituents: (
+      $for(constituents-list)$
+      "$it$",
+      $endfor$
+    ),
   $endif$
-  $if(collaborators)$
-    collaborators: [$collaborators$],
+  $if(collaborators-list)$
+    collaborators: (
+      $for(collaborators-list)$
+      "$it$",
+      $endfor$
+    ),
   $endif$
-  $if(agreements)$
-    agreements: [$agreements$],
+  $if(agreements-list)$
+    agreements: (
+      $for(agreements-list)$
+      "$it$",
+      $endfor$
+    ),
   $endif$
-  $if(approvals)$
-    approvals: [$approvals$],
+  $if(approvals-list)$
+    approvals: (
+      $for(approvals-list)$
+      "$it$",
+      $endfor$
+    ),
   $endif$
   $if(copies-to)$
     copies-to: [$copies-to$],
