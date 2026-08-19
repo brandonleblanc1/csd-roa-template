@@ -60,15 +60,7 @@
     ),
   $endif$
   $if(assigned-value.value)$
-    assigned-value: (
-      [#float($assigned-value.value$)]
-      + sym.space.nobreak
-      + sym.plus.minus
-      + sym.space.nobreak
-      + [#float($assigned-value.uncertainty$)]
-      + sym.space.nobreak
-      + [$assigned-value.units$]
-    ),
+    assigned-value: [$assigned-value$],
   $endif$
   $if(exp-date.day)$
     exp-date: [

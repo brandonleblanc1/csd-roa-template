@@ -282,34 +282,6 @@ $endif$
   }
 }
 
-// Function to format SI units given a value and common unit.
-//
-// param: `content`
-//   Content to format. Should be specified as [`value` `units`], where
-//   `value` is the magnitude and `units` is one of the following: percent
-//   (or %), ppm, or ppb.
-#let make-units(
-  content,
-) = {
-  content = content.text.split()
-  let value = [#float(content.at(0))]
-  let units = content.at(1)
-
-  let prefix = if units in ("percent", "%") {
-    [c]
-  } else if units == "ppm" {
-    sym.mu
-  } else if units == "ppb" {
-    [n]
-  } else {
-    panic("This unit has not been implemented!")
-  }
-
-  (
-    value + sym.space.nobreak + prefix + [mol] + sym.space.nobreak + [mol] + super(sym.minus + [1])
-  )
-}
-
 // Function to generate references section.
 //
 // param: `sources`
@@ -320,8 +292,14 @@ $endif$
 #let make-refs(
   sources,
 ) = {
-  sources = sources.children.at(1).text.split()
-  bibliography(sources.at(0), style: sources.at(1))
+  sources = sources.children.last().text.split()
+
+  let refs-file = sources.first()
+  if refs-file.starts-with(".") {
+    refs-file = "." + refs-file
+  }
+
+  bibliography(refs-file, style: sources.last())
 }
 
 // Function to format author names.
