@@ -47,10 +47,7 @@ reviewed-by:
 srms-list:
   - SRM 1
   - SRM 2
-assigned-value:
-  value: false
-  uncertainty: false
-  units: false
+assigned-value: false
 exp-date:
   day: false
   month: false

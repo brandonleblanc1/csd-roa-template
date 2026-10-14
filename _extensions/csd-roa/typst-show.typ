@@ -59,7 +59,7 @@
       $endfor$
     ),
   $endif$
-  $if(assigned-value.value)$
+  $if(assigned-value)$
     assigned-value: [$assigned-value$],
   $endif$
   $if(exp-date.day)$
